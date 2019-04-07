@@ -1,0 +1,25 @@
+#image{
+    float: left;
+    border: 1px solid #4444a9;
+    height: 15em;
+}
+
+#title{
+    text-align: center;
+    border-bottom: 4px solid #4444a9;
+    font-family: sans-serif;
+    font-variant: petite-caps;
+    font-weight: 600;
+    color: #4444a9;
+    margin-bottom: 1em;
+}
+
+#content{
+    border: 1px solid #4444a9;
+    margin-left: 14em;
+    height: 15em;
+}
+
+li {
+    list-style: none;
+}
