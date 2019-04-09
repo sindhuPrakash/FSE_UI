@@ -9,6 +9,18 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script>
+        function addExperience() {
+            var table = document.getElementById("expTable");
+            var row = table.insertRow(1);
+            var cel1 = row.insertCell(0);
+            var cel2 = row.insertCell(1);
+            var cel3 = row.insertCell(2);
+            cel1.innerHTML = document.getElementById("expCompany").value;
+            cel2.innerHTML = document.getElementById("expProject").value;
+            cel3.innerHTML = document.getElementById("expYears").value;
+        }
+    </script>
 </head>
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
@@ -35,7 +47,7 @@
             </div>
         </div>
     </nav>
-    <div id="about" class="jumbotron">
+    <div id="about" class="container-fluid jumbotron">
         <h1>Sindhu Prakash</h1>
         <p>Sample Description for Assignment</p>
     </div>
@@ -44,14 +56,39 @@
         <div class="row">
             <div class="col-sm-8">
                 <h2>Experience Page</h2>
-                <h4>Add Experience</h4>
-                <p>click here to add Experience...</p>
-                <button class="btn btn-default btn-lg">Get in Touch</button>
-            </div>
-            <div class="col-sm-4">
-                <span class="glyphicon glyphicon-signal logo"></span>
+                <table id="expTable" class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>COMPANY</th>
+                            <th>PROJECT</th>
+                            <th>YEARS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>John</td>
+                            <td>Doe</td>
+                            <td>john@example.com</td>
+                        </tr>
+                    </tbody>
+                </table></br></br>
+                <div class="form-group">
+                    <label for="expCompany">Company:</label>
+                    <input type="text" class="form-control" id="expCompany">
+                </div>
+                <div class="form-group">
+                    <label for="expProject">Project:</label>
+                    <input type="text" class="form-control" id="expProject">
+                </div>
+                <div class="form-group">
+                    <label for="expYears">Total Years:</label>
+                    <input type="text" class="form-control" id="expYears">
+                </div>
+                <div class="form-group"></div>
+                <button class="btn btn-primary" onclick="addExperience()">Add Experience</button>
             </div>
         </div>
+    </div>
     </div>
 
     <div id="personalBiography" class="container-fluid">
@@ -95,31 +132,32 @@
         </div>
     </div>
     <div id="contact" class="container-fluid  bg-grey">
-            <h2 class="text-center">CONTACT</h2>
-            <div class="row">
-              <div class="col-sm-5">
+        <h2 class="text-center">CONTACT</h2>
+        <div class="row">
+            <div class="col-sm-5">
                 <p>Contact us and we'll get back to you within 24 hours.</p>
                 <p><span class="glyphicon glyphicon-map-marker"></span> Chicago, US</p>
                 <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
-                <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p> 
-              </div>
-              <div class="col-sm-7">
-                <div class="row">
-                  <div class="col-sm-6 form-group">
-                    <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
-                  </div>
-                  <div class="col-sm-6 form-group">
-                    <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-                  </div>
-                </div>
-                <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
-                <div class="row">
-                  <div class="col-sm-12 form-group">
-                    <button class="btn btn-default pull-right" type="submit">Send</button>
-                  </div>
-                </div> 
-              </div>
+                <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
             </div>
+            <div class="col-sm-7">
+                <div class="row">
+                    <div class="col-sm-6 form-group">
+                        <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                    </div>
+                </div>
+                <textarea class="form-control" id="comments" name="comments" placeholder="Comment"
+                    rows="5"></textarea><br>
+                <div class="row">
+                    <div class="col-sm-12 form-group">
+                        <button class="btn btn-default pull-right" type="submit">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 

@@ -23,6 +23,11 @@
     }
   }
 
+  thead {
+    background-color: #333333;
+    color: #f8f8f8;
+  }
+
   .navbar {
     margin-bottom: 0;
     background-color: #333333;
