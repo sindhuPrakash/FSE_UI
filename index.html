@@ -20,6 +20,16 @@
             cel2.innerHTML = document.getElementById("expProject").value;
             cel3.innerHTML = document.getElementById("expYears").value;
         }
+        function addProfileHighlights() {
+            var table = document.getElementById("expProfileHighlights");
+            var row = table.insertRow(1);
+            var cel1 = row.insertCell(0);
+            var cel2 = row.insertCell(1);
+            var cel3 = row.insertCell(2);
+            cel1.innerHTML = document.getElementById("expSkills").value;
+            cel2.innerHTML = document.getElementById("expProficiency").value;
+            cel3.innerHTML = document.getElementById("expSkillYears").value;
+        }
     </script>
 </head>
 
